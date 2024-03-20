@@ -1,0 +1,174 @@
+{
+  "main": {
+    "id": "b22c5b9082d6c6e3",
+    "type": "split",
+    "children": [
+      {
+        "id": "e8afbdfdb00082f8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3d67435f2e15b9c6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "01_books/如何阅读一本书/如何实践.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "3a82ce971d8c2929",
+    "type": "split",
+    "children": [
+      {
+        "id": "589c0f4604b9ca9b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "bf0326acb1ddbc5c",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "1c0024801a346782",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "tag:#map-or_insert_with_key",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "664e9b1825a2d8ac",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "d63b7f90808fb72a",
+    "type": "split",
+    "children": [
+      {
+        "id": "900ed1975ed3789f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4eff3620599e49f7",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "01_books/如何阅读一本书/如何实践.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "cf551456837714b8",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "01_books/如何阅读一本书/如何实践.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "3f2a7675a4bfb249",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "5a33521a71b8ac96",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "01_books/如何阅读一本书/如何实践.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
+    }
+  },
+  "active": "bf0326acb1ddbc5c",
+  "lastOpenFiles": [
+    "03_code_language/obsidian",
+    "03_code_language/notion",
+    "03_code_language/markdown",
+    "01_books/如何阅读一本书/目录.md",
+    "01_books/如何阅读一本书/如何实践.md",
+    "01_books/搞定/如何实践.md",
+    "01_books/搞定/目录.md",
+    "02_codes/tikv/读流程/get.md",
+    "01_books/如何阅读一本书",
+    "01_books/搞定",
+    "02_codes/tikv/读流程/coprocessor.md",
+    "02_codes/tikv/grpc/Context.md",
+    "03_code_language/rust/map.md",
+    "03_code_language/rust/宏.md",
+    "02_codes/tikv/grpc",
+    "03_code_language/rust",
+    "03_code_language",
+    "未命名.md",
+    "tikv.md",
+    "02_codes/tikv/读流程",
+    "02_codes/tikv",
+    "02_codes"
+  ]
+}
