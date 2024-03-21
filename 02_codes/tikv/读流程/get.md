@@ -202,7 +202,10 @@ fn future_get<E: Engine, L: LockManager, F: KvFormat>(
 ```
 
 
-store.get
+---
+
+in src/storeage/mod.rs
+
 ```rust
 pub fn get(  
 &self,  
@@ -216,6 +219,7 @@ pub fn get(
 	let deadline = Self::get_deadline(&ctx);  
 	const CMD: CommandKind = CommandKind::get;  
 	let priority = ctx.get_priority();  
+	//从上下文中获取任务元数据
 	let metadata = TaskMetadata::from_ctx(ctx.get_resource_control_context());  
 	let resource_limiter = self.resource_manager.as_ref().and_then(|r| {  
 		r.get_resource_limiter(  
@@ -224,14 +228,16 @@ pub fn get(
 			ctx.get_resource_control_context().get_override_priority(),  
 		)  
 	});  
+	//
 	let priority_tag = get_priority_tag(priority);  
+	
 	let resource_tag = self.resource_tag_factory.new_tag_with_key_ranges(  
-	&ctx,  
-	vec![(key.as_encoded().to_vec(), key.as_encoded().to_vec())],  
+		&ctx,  
+		vec![(key.as_encoded().to_vec(), key.as_encoded().to_vec())],  
 	);  
 	let concurrency_manager = self.concurrency_manager.clone();  
 	let api_version = self.api_version;  
-	let busy_threshold = Duration::from_millis(ctx.busy_threshold_ms as u64);  
+	let busy_threshold = Duration::from_millis(ctx.f as u64);  
 	  
 	let quota_limiter = self.quota_limiter.clone();  
 	let mut sample = quota_limiter.new_sample(true);  
@@ -370,3 +376,74 @@ pub fn get(
 	)  
 }
 ```
+
+这段代码是一个公共方法 `get`，它接受一个 `Context` 对象、一个 `Key` 对象和一个 `start_ts` 参数，并返回一个实现了 `Future` trait 的类型，其输出是一个 `Result<(Option<Value>, KvGetStatistics)>`。  
+  
+函数的主要作用是执行一个异步的获取操作，从存储引擎中获取指定键的值，并返回一个包含获取结果和统计信息的元组。  
+  
+以下是函数的主要步骤：  
+  
+1. 记录获取操作开始的时间点 `stage_begin_ts`。  
+  
+2. 获取请求的截止时间 `deadline`。  
+  
+3. 定义常量 `CMD`，表示当前操作的命令类型为 `get`。  
+  
+4. 获取请求的优先级 `priority`。  
+  
+5. 从上下文中获取任务元数据 `metadata`。  
+  
+6. 如果存在资源管理器 `resource_manager`，则获取与请求相关的资源限制器 `resource_limiter`。  
+  
+7. 使用优先级创建一个资源标签 `priority_tag`。  
+  
+8. 使用键范围创建一个资源标签 `resource_tag`。  
+  
+9. 克隆并获取并发管理器 `concurrency_manager`。  
+  
+10. 获取存储引擎的 API 版本。  
+  
+11. 获取繁忙阈值 `busy_threshold`，将其转换为 `Duration` 类型。  
+  
+12. 克隆并获取配额限制器 `quota_limiter`。  
+  
+13. 创建一个配额限制器的采样对象 `sample`。  
+  
+14. 在读取线程池中执行异步闭包，同时检查是否超过繁忙阈值。  
+  
+15. 在异步闭包中执行以下操作：  
+- 记录调度开始的时间点 `stage_scheduled_ts`。  
+- 收集查询的跟踪信息。  
+- 增加 `CMD` 命令的计数器。  
+- 增加调度命令的优先级计数器。  
+- 检查请求是否超过截止时间。  
+- 检查 API 版本是否匹配。  
+- 记录命令执行的时间点 `command_duration`。  
+- 解析已解决的锁和已提交的锁。  
+- 准备快照上下文，并创建快照。  
+- 在快照上下文中执行以下操作：  
+- 检查截止时间。  
+- 记录快照接收的时间点 `stage_snap_recv_ts`。  
+- 获取快照的桶。  
+- 创建统计信息对象。  
+- 使用性能上下文执行以下操作：  
+- 使用配额限制器的采样对象观察 CPU 使用情况。  
+- 创建快照存储对象，并获取键的值和统计信息。  
+- 更新键读取的直方图。  
+- 收集扫描详情的指标。  
+- 收集读取流量的指标。  
+- 记录处理读取命令的时间。  
+- 记录命令处理的时间。  
+- 计算读取的字节数，并将其添加到采样对象中。  
+- 使用配额限制器消费采样对象，并获取配额延迟。  
+- 如果配额延迟不为零，则增加配额限制器的计数器。  
+- 记录调度完成的时间点 `stage_finished_ts`。  
+- 计算调度等待时间、快照等待时间、总等待时间和处理时间，并创建阶段延迟统计信息。  
+- 更新跟踪器的读取线程池调度等待时间。  
+- 返回获取操作的结果和统计信息的元组。  
+  
+16. 在资源计量标签中执行异步闭包，同时传递优先级、随机数和元数据等参数。  
+  
+总体来说，这个方法主要是为了执行异步的获取操作，并根据操作的结果构建一个包含获取结果和统计信息的元组。它还使用了资源标签、并发管理器和配额限制器来进行资源管理和配额控制。
+
+---

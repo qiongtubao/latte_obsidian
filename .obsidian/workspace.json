@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01_books/如何阅读一本书/如何实践.md",
+                "file": "03_code_language/git/使用方法.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "01_books/如何阅读一本书/如何实践.md",
+                "file": "03_code_language/git/使用方法.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "01_books/如何阅读一本书/如何实践.md",
+                "file": "03_code_language/git/使用方法.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "01_books/如何阅读一本书/如何实践.md"
+                "file": "03_code_language/git/使用方法.md"
               }
             }
           }
@@ -146,16 +146,19 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "bf0326acb1ddbc5c",
+  "active": "3d67435f2e15b9c6",
   "lastOpenFiles": [
+    "02_codes/tikv/读流程/get.md",
+    "03_code_language/git/使用方法.md",
+    "03_code_language/git",
+    "03_code_language/markdown/语法.md",
+    "01_books/如何阅读一本书/如何实践.md",
     "03_code_language/obsidian",
     "03_code_language/notion",
     "03_code_language/markdown",
     "01_books/如何阅读一本书/目录.md",
-    "01_books/如何阅读一本书/如何实践.md",
     "01_books/搞定/如何实践.md",
     "01_books/搞定/目录.md",
-    "02_codes/tikv/读流程/get.md",
     "01_books/如何阅读一本书",
     "01_books/搞定",
     "02_codes/tikv/读流程/coprocessor.md",
@@ -167,8 +170,6 @@
     "03_code_language",
     "未命名.md",
     "tikv.md",
-    "02_codes/tikv/读流程",
-    "02_codes/tikv",
-    "02_codes"
+    "02_codes/tikv/读流程"
   ]
 }
