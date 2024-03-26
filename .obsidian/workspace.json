@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "03_code_language/git/使用方法.md",
+                "file": "04_system/mac/need_install_app.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "03_code_language/git/使用方法.md",
+                "file": "04_system/mac/need_install_app.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "03_code_language/git/使用方法.md",
+                "file": "04_system/mac/need_install_app.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "03_code_language/git/使用方法.md"
+                "file": "04_system/mac/need_install_app.md"
               }
             }
           }
@@ -138,38 +138,43 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:打开快速切换": false,
-      "graph:查看关系图谱": false,
-      "canvas:新建白板": false,
-      "daily-notes:打开/创建今天的日记": false,
-      "templates:插入模板": false,
-      "command-palette:打开命令面板": false
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
     }
   },
   "active": "3d67435f2e15b9c6",
   "lastOpenFiles": [
-    "02_codes/tikv/读流程/get.md",
+    "03_code_language/nodejs/grammar.md",
+    "03_code_language/java",
+    "03_code_language/nodejs/install/nvm.md",
+    "03_code_language/rust/install",
+    "03_code_language/nodejs/install/pnpm.md",
+    "03_code_language/go/install.md",
+    "03_code_language/nodejs/install",
+    "04_system/mac/need_install_app.md",
     "03_code_language/git/使用方法.md",
-    "03_code_language/git",
+    "04_system/mac",
+    "05_",
+    "04_system",
+    "03_code_language/shell",
+    "03_code_language/go",
+    "03_code_language/python",
+    "03_code_language/nodejs",
+    "02_codes/tikv/读流程/get.md",
     "03_code_language/markdown/语法.md",
     "01_books/如何阅读一本书/如何实践.md",
-    "03_code_language/obsidian",
-    "03_code_language/notion",
-    "03_code_language/markdown",
     "01_books/如何阅读一本书/目录.md",
     "01_books/搞定/如何实践.md",
     "01_books/搞定/目录.md",
-    "01_books/如何阅读一本书",
-    "01_books/搞定",
     "02_codes/tikv/读流程/coprocessor.md",
     "02_codes/tikv/grpc/Context.md",
     "03_code_language/rust/map.md",
     "03_code_language/rust/宏.md",
-    "02_codes/tikv/grpc",
-    "03_code_language/rust",
-    "03_code_language",
     "未命名.md",
-    "tikv.md",
-    "02_codes/tikv/读流程"
+    "tikv.md"
   ]
 }
